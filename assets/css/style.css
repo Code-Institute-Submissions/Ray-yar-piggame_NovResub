@@ -185,3 +185,60 @@ main {
 .hidden {
   display: none;
 }
+
+@media only screen and (max-width: 745px) {
+  main {
+    display: block;
+    height: 100%;  
+  }
+  .player {
+    height: 50%;
+  }
+  .score {
+    font-size: 5rem;
+  }
+  .btn{
+    font-size: 1.5rem;
+  }
+  .btn--roll {
+    top: 48%;
+    left: 18%;
+    width: 33%;
+  }
+  .btn--hold {
+    top: 48%;
+    width: 33%;
+    left: 82%;
+  }
+  .btn--new {
+    top: 3%;
+    left: 23%;
+  }
+  .circle--target {
+    position: absolute;
+    left: 85%;
+    width: 70px;
+    height: 70px;
+    font-family: inherit;
+    font-size: 2rem;
+    color: gray;
+    text-transform: uppercase;
+    cursor: help;
+    font-weight: 400;
+    border: 3px solid #c7365f;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0.7rem;
+    border-radius: 50rem;
+    top: 6%;
+  }
+  .circle--target::after {
+    top: -35px;
+  }
+  .name {
+    font-size: 3rem;
+  }
+  .dice {
+    height: 10%;
+    top: 45%;
+  }
+}
