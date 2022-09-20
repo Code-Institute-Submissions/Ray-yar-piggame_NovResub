@@ -58,26 +58,26 @@ main {
   margin-bottom: auto;
 }
 
-.player--active {
+.player_active {
   background-color: rgba(255, 255, 255, 0.8);
 }
-.player--active .name {
+.player_active .name {
   font-weight: 700;
 }
-.player--active .score {
+.player_active .score {
   font-weight: 400;
 }
 
-.player--active .current {
+.player_active .current {
   opacity: 1;
 }
 
 .current {
-  background-color: #c7365f;
-  opacity: 0.8;
-  border-radius: 9px;
-  color: #fff;
-  width: 65%;
+  background-color: white;
+  color: gray;
+  border-radius: 50px;
+  border: 3px solid gray;
+  width: 45%;
   padding: 2rem;
   text-align: center;
   transition: all 0.75s;
@@ -87,7 +87,7 @@ main {
   text-transform: uppercase;
   margin-bottom: 1rem;
   font-size: 1.7rem;
-  color: #ddd;
+  color: gray;
 }
 
 .current-score {
@@ -111,11 +111,11 @@ main {
   background-color: white;
   background-color: rgba(255, 255, 255, 1);
   padding: 0.7rem 2.5rem;
-  border-radius: 50rem;
+  border-radius: 1rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
-.circle--target {
+.circle_target {
   position: absolute;
   left: 50%;
   width: 120px;
@@ -134,7 +134,7 @@ main {
   top: 8rem;
 }
 
-.circle--target::after {
+.circle_target::after {
   content: 'Target';
   position: absolute;
   width: 100%;
@@ -143,20 +143,15 @@ main {
   top: -60px;
   z-index: 1;
 }
-.btn--new {
+.btn_new {
   top: 36rem;
 }
 
-.btn--roll {
+.btn_roll {
   top: 42rem;
 }
-.btn--hold {
+.btn_hold {
   top: 48rem;
-}
-
-.btn:active {
-  transform: translate(-50%, 3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
 .btn:focus {
@@ -173,11 +168,11 @@ main {
   border-radius: 20px;
 }
 
-.player--winner {
+.player_winner {
   background-color: lightgreen;
 }
 
-.player--winner .name {
+.player_winner .name {
   font-weight: 700;
   color: green;
 }
@@ -200,21 +195,21 @@ main {
   .btn{
     font-size: 1.5rem;
   }
-  .btn--roll {
+  .btn_roll {
     top: 48%;
     left: 18%;
     width: 33%;
   }
-  .btn--hold {
+  .btn_hold {
     top: 48%;
     width: 33%;
     left: 82%;
   }
-  .btn--new {
+  .btn_new {
     top: 3%;
     left: 23%;
   }
-  .circle--target {
+  .circle_target {
     position: absolute;
     left: 85%;
     width: 70px;
@@ -231,7 +226,7 @@ main {
     border-radius: 50rem;
     top: 6%;
   }
-  .circle--target::after {
+  .circle_target::after {
     top: -35px;
   }
   .name {
