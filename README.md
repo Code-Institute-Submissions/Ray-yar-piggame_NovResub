@@ -48,6 +48,7 @@ This game contains very friendly interface for a players to pass their time. Gre
 - Player Two
 
     - This part shows the whole informations about player two.
+    
         ![Player two](.docs/player_2.png)
 
 
