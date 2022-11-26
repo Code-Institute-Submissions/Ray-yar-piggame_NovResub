@@ -1,25 +1,22 @@
 /*jshint esversion: 6 */
 
-const btnNew = document.querySelector('.btn_new');
-const btnHold = document.querySelector('.btn_hold');
-
 let scores, currentScore, activePlayer, playing, playerOneName, playerTwoName;
 
 // DOM Loaded
 document.addEventListener('DOMContentLoaded', function() {
 
-  // playerOneName = prompt('Please enter player 1 name:');
-  // while (playerOneName == ""){
-  //   playerOneName = prompt('Please enter player 1 name:');
-  // }
+  playerOneName = prompt('Please enter player 1 name:');
+  while (playerOneName == ""){
+    playerOneName = prompt('Please enter player 1 name:');
+  }
 
-  // playerTwoName = prompt("please enter player 2 name:");
-  // while (playerTwoName == ""){
-  //   playerTwoName = prompt('Please enter player 2 name:');
-  // }
+  playerTwoName = prompt("please enter player 2 name:");
+  while (playerTwoName == ""){
+    playerTwoName = prompt('Please enter player 2 name:');
+  }
   
-  document.getElementById("player_one").textContent = playerOneName;
-  document.getElementById("player_two").textContent = playerTwoName;
+  document.getElementById("player_one_name").textContent = playerOneName;
+  document.getElementById("player_two_name").textContent = playerTwoName;
   startNewGame();
 
 });
@@ -33,14 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
  var player_two_score = document.getElementById('player_score_2');
  var current_one = document.getElementById('current_1');
  var current_two = document.getElementById('current_2');
- var player1 = document.getElementById('player_one');
- var player2 = document.getElementById('player_two');
+ var player1 = document.getElementById('player_1');
+ var player2 = document.getElementById('player_2');
  
  function startNewGame() {
 
   scores = [0, 0];
   currentScore = 0;
-  activePlayer = 0;
+  activePlayer = 1;
   playing = true;
 
   player_one_score.textContent = 0;
@@ -93,13 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Check if game is running and players are not finished
   if (playing) {
     // 1. Add current score to active player's score
-    scores[activePlayer] += currentScore;
+    scores[activePlayer-1] += currentScore;
 
-    document.getElementById(`score_${activePlayer}`).textContent =
-    scores[activePlayer];
+    document.getElementById(`player_score_${activePlayer}`).textContent = scores[activePlayer-1];
 
     // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer-1] >= 100) {
       // Finish the game
       finishGame();
     } else {
@@ -117,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById(`current_${activePlayer}`).textContent = 0;
     currentScore = 0;
-    activePlayer = activePlayer === 0 ? 1 : 0;
+    activePlayer = activePlayer === 1 ? 2 : 1;
     player1.classList.toggle('player_active');
     player2.classList.toggle('player_active');
 
@@ -131,8 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     playing = false;
     diceImage.classList.add('hidden');
-    document.querySelector(`.player_${activePlayer}`).classList.add('player_winner');
-    document.querySelector(`.player_${activePlayer}`).classList.remove('player_active');
-    alert("Congratulations " + (activePlayer === 0 ? playerOneName : playerTwoName) + ", You are the winner!!!");
+    document.getElementById(`player_${activePlayer}`).classList.add('player_winner');
+    document.getElementById(`player_${activePlayer}`).classList.remove('player_active');
+    alert("Congratulations " + (activePlayer === 1 ? playerOneName : playerTwoName) + ", You are the winner!!!");
     
   }
