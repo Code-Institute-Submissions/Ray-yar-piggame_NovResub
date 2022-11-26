@@ -144,3 +144,59 @@ body {
 .player_winner{
   background-color: lightgreen;
 }
+@media screen and (max-width: 600px) {
+  .dice {
+      top: 38rem;
+  }
+  .btn_roll {
+    top: 67rem !important;
+  }
+  .btn_hold {
+    top: 67rem  !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .player {
+    padding: 120px 10px;
+  }
+  .target {
+    position: absolute;
+    left: 88%;
+    transform: translateX(-50%);
+    font-family: inherit;
+    font-size: 2rem;
+    color: black;
+    text-transform: uppercase;
+    cursor: help;
+    font-weight: 400;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 7px 25px;
+    border-radius: 50rem;
+    top: 3.4rem;
+  }
+  .target-title {
+    position: absolute;
+    left: 65%;
+    transform: translateX(-50%);
+    font-family: inherit;
+    font-size: 2.5rem;
+    color: black;
+    text-transform: uppercase;
+    cursor: help;
+    font-weight: 400;
+    top: 4.5%;
+  }
+  .btn_roll {
+    top: 61rem;
+    left: 37%;
+  }
+  .btn_hold {
+    top: 61rem;
+    left: 63%;
+  }
+  .btn{
+    padding: 1rem 2rem;
+  }
+}
+
