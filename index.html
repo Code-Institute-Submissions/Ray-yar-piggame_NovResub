@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Pig Game</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-  </head>
-  <body>
-    <main>
-      <section class="player player_0 player_active">
-        <h2 class="name" id="name_0">Player 1</h2>
-        <p class="score" id="score_0">0</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" id="current_0">0</p>
-        </div>
-      </section>
-      <section class="player player_1">
-        <h2 class="name" id="name_1">Player 2</h2>
-        <p class="score" id="score_1">0</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" id="current_1">0</p>
-        </div>
-      </section>
 
-      <img src="assets/images/dice-6.png" alt="Playing dice" class="dice" />
-      <button class="circle_target">100 </button>
-      <button class="btn btn_new"> New game</button>
-      <button class="btn btn_roll"> Roll dice</button>
-      <button class="btn btn_hold"> Hold</button>
-    </main>
-    <script src="assets/script/script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Pig Game</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+  <div class="player">
+    <div class="player_container first_player">
+      <div class="player_name">
+        Rohullah Ahmadyar
+      </div>
+      <div class="player_score">
+        20
+      </div>
+      <div class="player_current_score">
+        10
+      </div>
+    </div>
+  </div>
+  <div class="player">
+    <div class="player_container second_player">
+      <div class="player_name">
+        Rohullah Ahmadyar
+      </div>
+      <div class="player_score">
+        20
+      </div>
+      <div class="player_current_score">
+        10
+      </div>
+    </div>
+  </div>
+
+</body>
+
 </html>

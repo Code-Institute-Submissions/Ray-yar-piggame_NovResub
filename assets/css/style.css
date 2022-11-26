@@ -20,220 +20,46 @@ body {
   justify-content: center;
 }
 
-main {
-  position: relative;
-  width: 100rem;
-  height: 60rem;
-  background-color: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-  border-radius: 9px;
-  overflow: hidden;
-  display: flex;
-}
-
-.player {
-  flex: 50%;
-  padding: 9rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.75s;
-}
-
-/* ELEMENTS */
-.name {
-  position: relative;
-  font-size: 4rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-  font-weight: 300;
-  margin-bottom: 1rem;
-}
-
-.score {
-  font-size: 8rem;
-  font-weight: 300;
-  color: #c7365f;
-  margin-bottom: auto;
-}
-
-.player_active {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-.player_active .name {
-  font-weight: 700;
-}
-.player_active .score {
-  font-weight: 400;
-}
-
-.player_active .current {
-  opacity: 1;
-}
-
-.current {
-  background-color: white;
-  color: gray;
-  border-radius: 50px;
-  border: 3px solid gray;
-  width: 45%;
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.75s;
-}
-
-.current-label {
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  font-size: 1.7rem;
-  color: gray;
-}
-
-.current-score {
-  font-size: 3.5rem;
-}
-
-.btn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #444;
-  background: none;
-  border: none;
-  font-family: inherit;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 400;
-  transition: all 0.2s;
-  border: 0.5px solid gray;
-  background-color: white;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 0.7rem 2.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
-}
-
-.circle_target {
-  position: absolute;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  transform: translateX(-50%);
-  font-family: inherit;
-  font-size: 3.5rem;
-  color: gray;
-  text-transform: uppercase;
-  cursor: help;
-  font-weight: 400;
-  border: 3px solid #c7365f;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 0.7rem;
-  border-radius: 50rem;
-  top: 8rem;
-}
-
-.circle_target::after {
-  content: 'Target';
-  position: absolute;
-  width: 100%;
+.player{
+  width: 50%;
   height: 100%;
-  left: 0;
-  top: -60px;
-  z-index: 1;
-}
-.btn_new {
-  top: 36rem;
+  background-color: #e6e1e1;
+  text-align: center;
+  padding: 100px;
 }
 
-.btn_roll {
-  top: 42rem;
-}
-.btn_hold {
-  top: 48rem;
+.player_name{
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.btn:focus {
-  outline: none;
+.player_score{
+  font-size: 40px;
+  font-weight: bold;
+  background-color: #333;
+  margin: auto;
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 25px;
+  width: 100px;
+  color: white;
+  margin-top: 30px;
 }
 
-.dice {
-  position: absolute;
-  left: 50%;
-  top: 22.5rem;
-  transform: translateX(-50%);
-  height: 10rem;
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+.player_current_score{
+  margin: auto;
+  padding: 10px;
+  width: 150px;
+  border-bottom: 3px solid black;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 150px;
 }
 
-.player_winner {
-  background-color: lightgreen;
+.player_container{
+  border: 1px solid lightgray;
+    background: white;
+    border-radius: 15px;
+    padding: 63px 0px;
 }
 
-.player_winner .name {
-  font-weight: 700;
-  color: green;
-}
-
-.hidden {
-  display: none;
-}
-
-@media only screen and (max-width: 745px) {
-  main {
-    display: block;
-    height: 100%;  
-  }
-  .player {
-    height: 50%;
-  }
-  .score {
-    font-size: 5rem;
-  }
-  .btn{
-    font-size: 1.5rem;
-  }
-  .btn_roll {
-    top: 48%;
-    left: 18%;
-    width: 33%;
-  }
-  .btn_hold {
-    top: 48%;
-    width: 33%;
-    left: 82%;
-  }
-  .btn_new {
-    top: 3%;
-    left: 23%;
-  }
-  .circle_target {
-    position: absolute;
-    left: 85%;
-    width: 70px;
-    height: 70px;
-    font-family: inherit;
-    font-size: 2rem;
-    color: gray;
-    text-transform: uppercase;
-    cursor: help;
-    font-weight: 400;
-    border: 3px solid #c7365f;
-    background-color: rgba(255, 255, 255, 1);
-    padding: 0.7rem;
-    border-radius: 50rem;
-    top: 6%;
-  }
-  .circle_target::after {
-    top: -35px;
-  }
-  .name {
-    font-size: 3rem;
-  }
-  .dice {
-    height: 10%;
-    top: 45%;
-  }
-}
