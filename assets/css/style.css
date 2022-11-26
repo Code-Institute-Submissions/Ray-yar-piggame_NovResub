@@ -92,3 +92,42 @@ body {
   font-weight: 400;
   top: 5rem;
 }
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+  border: 1px solid black;
+  background-color: #333;
+  padding: 1.5rem 3rem;
+  border-radius: 2.5rem;
+  box-shadow: 0 4px 3px rgb(0 0 0 / 30%);
+}
+
+.btn_roll{
+  top: 47rem;
+}
+.btn_hold{
+  top: 53rem;
+}
+
+.dice{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 1px 22px 21px rgb(0 0 0 / 40%);
+  top: 30rem;
+  width: 85px;
+  border-radius: 10px;
+}
+
+.btn_new_game {
+  left: 10rem;
+  top: 2rem;
+}
